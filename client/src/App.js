@@ -31,7 +31,7 @@ function App() {
             React Plants <span role="img">🌿</span>
           </h1>
           <ul className="steps">
-            <li className="darkButton">
+            <li>
               <Navbar/>
             </li>
             <li>
