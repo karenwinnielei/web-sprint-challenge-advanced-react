@@ -14,6 +14,10 @@ body {
   align-items: center;
 }
 
+.dark-mode .container{
+  border-bottom: 1px solid steelblue;
+}
+
 h1 {
   font-weight: 100;
   color: white;
@@ -126,10 +130,24 @@ p {
   background-color: #cf0;
 }
 
+.dark-mode .success-message {
+  background-color: steelblue;
+  border-radius: 3px;
+  border: 1px solid darkslategray;
+}
+
+.dark-mode .success-message p{
+  color: white;
+}
+
 form {
   background: #0e101c;
   max-width: 400px;
   margin: 0 auto;
+}
+
+.dark-mode form {
+  background: linen;
 }
 
 input {
@@ -143,6 +161,10 @@ input {
   font-size: 14px;
 }
 
+.dark-mode input{
+  border: 1px solid darkslategray;
+}
+
 label {
   line-height: 2;
   text-align: left;
@@ -152,6 +174,10 @@ label {
   color: white;
   font-size: 14px;
   font-weight: 200;
+}
+
+.dark-mode label {
+  color: darkslategray;
 }
 
 button {
@@ -166,8 +192,17 @@ button {
   cursor: pointer;
 }
 
+.dark-mode button {
+  background: lightsteelblue;
+  color: snow;
+}
+
 button:hover {
   background: #df2e6c;
+}
+
+.dark-mode button:hover {
+  background: steelblue;
 }
 
 button:active,
@@ -236,6 +271,10 @@ pre {
   line-height: 2;
 }
 
+.dark-mode .steps a {
+  color: linen;
+}
+
 .steps li {
   background: #cf0;
   padding: 3px 15px;
@@ -243,6 +282,13 @@ pre {
   position: relative;
 }
 
+.dark-mode .steps li {
+  background: steelblue
+}
+
+.dark-mode .steps li:first-child{
+  background: none;
+}
 .steps li:last-child {
   border: none;
 }
@@ -262,7 +308,7 @@ pre {
 }
 
 .toggle {
-  background: #ec5990;
+  background: lightsteelblue;
   border-radius: 50px;
   height: 18px;
   right: 0;
@@ -286,7 +332,4 @@ pre {
   color: darkslategrey
 }
 
-.steps .darkButton{
-  background: none;
-}
 
