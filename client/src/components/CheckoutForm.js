@@ -16,7 +16,7 @@ const initialValue = {
 
 const CheckoutForm = (props) => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [values, setValues] = useForm(initialValue);
+  const [values, handleChanges] = useForm(initialValue);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,14 +25,17 @@ const CheckoutForm = (props) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form 
+        onSubmit={handleSubmit}
+        data-testid="submit"
+      >
         <h2>Checkout Form</h2>
         <label>
           First Name:
           <input
             name="firstName"
             value={values.firstName}
-            onChange={this.handleChanges}
+            onChange={handleChanges}
           />
         </label>
         <label>
@@ -40,7 +43,7 @@ const CheckoutForm = (props) => {
           <input
             name="lastName"
             value={values.lastName}
-            onChange={this.handleChanges}
+            onChange={handleChanges}
           />
         </label>
         <label>
@@ -48,26 +51,28 @@ const CheckoutForm = (props) => {
           <input
             name="address"
             value={values.address}
-            onChange={this.handleChanges}
+            onChange={handleChanges}
           />
         </label>
         <label>
           City:
-          <input name="city" value={values.city} onChange={this.handleChanges} />
+          <input name="city" value={values.city} onChange={handleChanges} />
         </label>
         <label>
           State:
-          <input name="state" value={values.state} onChange={this.handleChanges} />
+          <input name="state" value={values.state} onChange={handleChanges} />
         </label>
         <label>
           Zip:
-          <input name="zip" value={values.zip} onChange={this.handleChanges} />
+          <input name="zip" value={values.zip} onChange={handleChanges} />
         </label>
-        <button>Checkout</button>
+        <button data-testid="checkout">Checkout</button>
       </form>
 
       {showSuccessMessage && (
-        <div className="success-message" data-testid="successMessage">
+        <div 
+          className="success-message" data-testid="successMessage"
+        >
           <p>
             You have ordered some plants! Woo-hoo! <span role="img">🎉</span>
           </p>
