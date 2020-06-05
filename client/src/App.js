@@ -5,6 +5,8 @@ import PlantList from "./components/PlantList";
 import ShoppingCart from "./components/ShoppingCart";
 import CheckoutForm from "./components/CheckoutForm";
 
+import Navbar from './components/Navbar'
+
 import "./App.css";
 
 function App() {
@@ -29,6 +31,9 @@ function App() {
             React Plants <span role="img">🌿</span>
           </h1>
           <ul className="steps">
+            <li className="darkButton">
+              <Navbar/>
+            </li>
             <li>
               <NavLink exact to="/">
                 Plants
